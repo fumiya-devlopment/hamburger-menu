@@ -1,1 +1,391 @@
 @charset "utf-8";
+.l-header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 26px;
+        padding-right: 24px;
+        padding-bottom: 26px;
+        padding-left: 24px;
+        box-sizing: border-box;
+
+        @include sp {
+            padding-top: 19px;
+            padding-bottom: 18px;
+            padding-left: 30px;
+        }
+    }
+
+    &__logo {
+        width: 295px;
+        max-height: 48px;
+
+        @include sp {
+            max-width: 195px;
+        }
+
+        & a {
+            display: block;
+
+            &:hover {
+                color: #00a0e9;
+                opacity: 1;
+            }
+
+            @include sp {
+                display: inline-block;
+            }
+        }
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.8s;
+
+        &.is-active {
+            opacity: 0;
+            transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.8s;
+        }
+
+        @include sp {
+            display: none;
+        }
+    }
+
+    &__gnav {
+        margin-left: 30px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &__item {
+        & a {
+            padding: 15px 20px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #3b4043;
+            transition: all 0.5s;
+
+            &:hover {
+                color: #195cb8;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__contact {
+        margin-left: 20px;
+
+        & a {
+            display: inline-block;
+            padding-top: 11px;
+            padding-right: 26px;
+            padding-bottom: 13px;
+            padding-left: 26px;
+            font-size: 1.6em;
+            font-weight: 700;
+            border: 2px solid #195cb8;
+            border-radius: 24px;
+            background: #195cb8;
+            color: $color_white;
+            transition: 0.5s;
+
+            &:hover {
+                border-color: #195cb8;
+                background-color: #fff;
+                color: #195cb8;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__hamburger {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.7s cubic-bezier(0.33, 1, 0.68, 1);
+        z-index: 100;
+
+        &.is-active {
+            visibility: inherit;
+            opacity: 1;
+        }
+
+        &Logo {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-top: 15px;
+            padding-left: 30px;
+            z-index: 10000;
+        }
+
+        &Inner {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            margin-right: auto;
+            margin-left: auto;
+            padding-top: 175px;
+            background-color: #004bb1;
+
+            @include sp {
+                padding-top: 105px;
+                padding-right: 60px;
+                padding-left: 60px;
+            }
+        }
+
+        &List {
+            max-width: 500px;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+        }
+
+        &Item {
+            &:not(:first-child) {
+                margin-top: 20px;
+            }
+
+            & a {
+                font-size: 1.8rem;
+                font-weight: 700;
+                color: #fff;
+
+                &:hover {
+                    opacity: 0.7;
+                    transition: 0.5s;
+                }
+            }
+
+            &:last-child {
+                margin-top: 30px;
+
+                & a {
+                    display: inline-block;
+                    padding-top: 11px;
+                    padding-right: 79px;
+                    padding-bottom: 13px;
+                    padding-left: 80px;
+                    border: 2px solid #fff;
+                    border-radius: 24px;
+
+                    @include sp {
+                        padding-right: 60px;
+                        padding-left: 60px;
+                        font-size: 1.6rem;
+                    }
+
+                    &:hover {
+                        background-color: #fff;
+                        color: #195cb8;
+                        box-sizing: border-box;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &__trigger {
+        display: table;
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        right: 0;
+        visibility: hidden;
+        opacity: 0;
+
+        @include sp {
+            visibility: inherit;
+            opacity: 1;
+        }
+
+        &.is-active {
+            visibility: inherit;
+            opacity: 1;
+        }
+
+        &Btn {
+            transition: all 0.4s ease-in-out;
+            line-height: 1.5;
+            position: relative;
+            display: table-cell;
+            vertical-align: middle;
+            background-color: #004bb1;
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.9375rem;
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            margin-top: 11px;
+            margin-bottom: 9px;
+            padding-top: 24px;
+            padding-right: 25px;
+            padding-bottom: 35px;
+            padding-left: 25px;
+            border-color: transparent;
+            border-radius: 40px;
+            cursor: pointer;
+
+            @include sp {
+                width: 60px;
+                height: 60px;
+                margin-top: 6px;
+                margin-right: 0;
+                margin-bottom: 0;
+                padding: 0;
+                background-color: transparent;
+            }
+        }
+
+        &Line {
+            display: block;
+            height: 2px;
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            background-color: #fff;
+            transition: 0.4s;
+
+            @include sp {
+                top: 25px;
+                width: 20px;
+                background-color: #195cb8;
+            }
+
+            &.is-active {
+                background-color: transparent;
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: -6px;
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                transition: inherit;
+
+                @include sp {
+                    background-color: #195cb8;
+                }
+            }
+
+            &.is-active::before {
+                top: 0;
+                transform: rotate(45deg);
+
+                @include sp {
+                    background-color: #fff;
+                }
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 6px;
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                transition: inherit;
+
+                @include sp {
+                    background-color: #195cb8;
+                }
+            }
+
+            &.is-active::after {
+                top: 0;
+                transform: rotate(-45deg);
+
+                @include sp {
+                    background-color: #fff;
+                }
+            }
+        }
+
+        &Text {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            width: 100%;
+            transform: translateX(-50%);
+
+            @include sp {
+                bottom: 5px;
+            }
+
+            &::before {
+                content: "MENU";
+                font-family: "Yu Gothic Medium", "游ゴシック", "Yu Gothic",
+                    "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3",
+                    "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
+                font-size: 10px;
+                font-weight: 700;
+                color: #fff;
+                letter-spacing: 0.02em;
+                text-align: center;
+
+                @include sp {
+                    color: #195cb8;
+                }
+            }
+
+            &.is-active::before {
+                content: "CLOSE";
+
+                @include sp {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+// ここからSassに組み込み
+@media (min-width: 1025px) {
+    body.is-fixed {
+        overflow-y: hidden;
+    }
+}
+
+@media (max-width: 1024px) {
+    body.is-fixed {
+        overflow-y: hidden;
+    }
+}
+
+@media (max-width: 767px) {
+    .l-header__logo .sp {
+        display: block;
+        max-width: 190px;
+        max-height: 33px;
+    }
+}
