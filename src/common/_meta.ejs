@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta name="viewport" content="width=device-width,maximum-scale=1.0,minimum-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>
+    <%- meta.pageTitle %>
+  </title>
+  <meta name="robots" content="noindex">
+  <meta name="keywords" content="<%- meta.keywords %>" />
+  <meta name="description" content="<%- meta.description %>" />
+  <meta property="og:title" content="<%- meta.pageTitle %>" />
+  <meta property="og:description" content="<%- meta.description %>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="<%- conf.og.img %>" />
+  <meta property="og:url" content="<%- meta.url %>" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="<%- meta.pageTitle %>" />
+  <%_ if (conf.path.ico !='' ) { _%>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="<%- conf.path.ico %>" />
+    <%_ } _%>
+      <%_ if (conf.path.appico !='' ) { _%>
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="<%- conf.path.appico %>" />
+        <%_ } _%>
+          <link rel="stylesheet" href="<%- conf.path.css %>index.css" />
+</head>
+
+</html>
