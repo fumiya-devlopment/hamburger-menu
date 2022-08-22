@@ -1,0 +1,94 @@
+// 表紙用 見出しのデザイン
+.kss-overview {
+  padding: 1.4rem 2rem 4rem;
+
+  h1 {
+    padding-top: 2.6rem;
+    padding-bottom: 1.8rem;
+    font-size: 1.6rem;
+    margin-bottom: 1em;
+
+  }
+
+  h2 {
+    margin: 2rem 0 1rem 0;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    font-weight: normal;
+    &::after {
+      width: 100%;
+    }
+
+  }
+
+  h3 {
+    margin: 3rem 0 1rem 0;
+    // padding-left: 0.75rem;
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.2;
+    // border-color: var(--kss-scheibo--maincolor);
+    // border-left-width: 0.25rem;
+    // border-style:  solid;
+    &::after {
+      width: 100%;
+      content: '';
+      border-color: var(--kss-scheibo--maincolor);
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      display: block;
+      margin-top: 0.75rem;
+    }
+  }
+
+  h4 {
+    margin: 2rem 0 1rem 0;
+    font-size: 1.2rem;
+    padding-top: .1rem;
+    padding-bottom: .1rem;
+    font-weight: normal;
+    border-left-width: 3px;
+
+  }
+
+  a {
+    text-decoration: underline;
+
+  }
+
+ p > code {
+    background: #f0f0f0;
+    border-radius: 0.3em;
+    display: inline-block;
+    margin: 0 .2em ;
+    padding: 0 .2em;
+    color: #000;
+    // border: 1px solid #999;
+  }
+
+  ul{
+    padding-left: 1em;
+   > li{
+    //  text-indent: -1em;
+    position: relative;
+    & + li{
+      margin-top: .6em;
+    }
+
+     &::before {
+       content:"";
+       display: inline-block;
+       width: .4em;
+       height: .4em;
+      //  background: var(--kss-scheibo--maincolor);
+       background: #999;
+       transform: translate(-200%,150%);
+       position: absolute;
+       top: 0;
+       left: 0;
+       border-radius: 1em;
+     }
+   }
+  }
+
+}

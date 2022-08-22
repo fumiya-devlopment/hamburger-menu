@@ -1,0 +1,80 @@
+// スタイルガイドのカスタム
+
+
+// スクロールバーを常に表示
+html {
+ overflow-y: scroll;
+}
+
+
+// テーマカラーの設定 ------------------
+:root {
+  // キーカラー
+  --kss-scheibo--maincolor: #3476b8;
+  // テキストカラー
+  --kss-scheibo--maincolor-con: #fff;
+}
+
+
+.kss-style--maincolor .kss-description{
+  color:  var(--kss-scheibo--maincolor-con);
+}
+.kss-style--maincolor.kss-style--colorlist .kss-description{
+    color: #000;
+
+}
+
+.kss-doc-title,
+.kss-description {
+    color: #000;
+}
+
+//  ------------------------------------
+
+
+.kss-section {
+  border:none;
+  border-top: 1px solid #dae1e7;
+}
+
+.kss-container {
+    margin-top: 1.5rem;
+    margin-bottom: 15rem;
+    padding: 0;
+    position: relative;
+}
+
+
+.kss-style--header,
+.kss-source,
+.kss-markup,
+.kss-modifier__wrapper{
+    padding: 1.4rem 2rem ;
+}
+
+
+.kss-doc-title,
+.kss-title,
+.kss-modifier__defaultinsertmarkuptext,
+.kss-overview h1 {
+  font-weight: bold;
+}
+
+
+.kss-title--level-2,
+.kss-modifier__defaultinsertmarkuptext,
+.kss-modifier__description,
+.kss-modifier__insertmarkuptext,
+.kss-colors__variable {
+    font-style: normal;
+}
+
+
+//  ------------------
+
+
+/*パーツ設定*/
+@import "parts/*";
+
+
+//  ------------------------------------

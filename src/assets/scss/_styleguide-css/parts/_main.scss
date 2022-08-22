@@ -1,0 +1,19 @@
+// メインエリア
+
+.kss-main {
+    z-index: 2;
+    position: relative;
+    box-shadow:none;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-top: none;
+    margin-left: 20%  ;
+    // border-top-left-radius: 0.5rem;
+    // border-top-right-radius: 0.5rem;
+
+    border-radius: 0.5rem;
+
+  .kss-fullscreen-mode &{
+    margin-left: 0;
+
+  }
+}
