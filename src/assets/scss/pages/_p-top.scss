@@ -1,1 +1,55 @@
 @charset "utf-8";
+.p-top {
+    width: 100%;
+
+    &__inner {
+        min-width: 1200px;
+        height: 680px;
+        margin-right: 20px;
+        margin-left: 20px;
+        background-color: #f0f3f5;
+    }
+
+    &__box {
+        width: 52.5%;
+        // padding: 0 15px;
+    }
+
+    &__title {
+        font-size: 3.2em;
+    }
+
+    &__text {
+        margin-top: 20px;
+        font-size: 1.25em;
+        font-weight: 600;
+        line-height: 1.75;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        &Item {
+            margin-left: 20px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__image {
+        & img {
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .p-top__inner {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
