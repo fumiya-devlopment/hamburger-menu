@@ -213,7 +213,6 @@
     }
 
     &__trigger {
-        display: table;
         position: absolute;
         z-index: 100;
         top: 0;
@@ -271,13 +270,13 @@
 
         &Line {
             display: block;
-            height: 2px;
             position: absolute;
             top: 30px;
             left: 50%;
-            transform: translateX(-50%);
             width: 30px;
+            height: 2px;
             background-color: $color_white;
+            transform: translateX(-50%);
             transition: 0.4s;
 
             @include sp {
