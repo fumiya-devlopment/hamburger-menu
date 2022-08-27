@@ -5,28 +5,21 @@
 //  */
 
 //サイト全体のフォントカラー
-$color_txt: #003953;
-$color_white: #fff;
+$color_primary: #195cb8; /* プライマリー */
+$color_txt: #3b4043; /* 本文用のテキスト */
+$color_white: #fff; /* 白色 */
 
 //リンクの設定
-$color_lnk: #000; //リンクのカラー
-$link_deco: none; //リンクのデコレーション設定
+$color_link: #000; /* リンクのカラー */
+$link_deco: none; /* リンクのデコレーション設定 */
 
-//フォーム系
-$color_key: #15a9d8;
-$color_placeholder: #e2e2e2;
-$color_bg: #fff;
-$color_contents: #eeeceb;
-$color_consultant: #d29b00;
-$color_researcher: #1b4b7d;
-
-//baseのfont-size
+//フォントの設定
 $base_fs: 16;
 $imgPath: "/assets/img/";
 $font-family-basic: "Noto Sans JP", "Yu Gothic Medium", "游ゴシック",
-  "Yu Gothic", "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3",
-  "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
+    "Yu Gothic", "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3",
+    "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
 
-$font-family-basic02: "Yu Gothic Medium", "游ゴシック", "Yu Gothic",
-  "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",
-  "メイリオ", "Meiryo";
+$font-family-txt: "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "游ゴシック",
+    YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",
+    "Meiryo";
