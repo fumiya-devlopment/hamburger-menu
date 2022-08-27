@@ -2,7 +2,7 @@
 .l-header {
     position: fixed;
     width: 100%;
-    background-color: #fff;
+    background-color: $color_white;
     z-index: 1000;
 
     &__inner {
@@ -17,7 +17,6 @@
         padding-right: 24px;
         padding-bottom: 26px;
         padding-left: 24px;
-        box-sizing: border-box;
 
         @include sp {
             padding-top: 19px;
@@ -30,20 +29,22 @@
         width: 295px;
         max-height: 48px;
 
-        @include sp {
-            max-width: 195px;
-        }
-
         & a {
             display: block;
 
+            @include sp {
+                display: inline-block;
+            }
+
             &:hover {
-                color: #00a0e9;
+                color: $color_white;
                 opacity: 1;
             }
 
-            @include sp {
-                display: inline-block;
+            img {
+                @include sp {
+                    max-width: 100%;
+                }
             }
         }
     }
@@ -52,20 +53,21 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.8s;
+        transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
 
         &.is-active {
             opacity: 0;
-            transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.8s;
+            visibility: hidden;
+            transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+        }
+
+        @include pc-tab {
+            display: none;
         }
 
         @include sp {
             display: none;
         }
-    }
-
-    &__gnav {
-        margin-left: 30px;
     }
 
     &__list {
@@ -79,11 +81,11 @@
             padding: 15px 20px;
             font-size: 1.6rem;
             font-weight: 700;
-            color: #3b4043;
+            color: $color_txt;
             transition: all 0.5s;
 
             &:hover {
-                color: #195cb8;
+                color: $color_primary;
                 opacity: 1;
             }
         }
@@ -98,18 +100,18 @@
             padding-right: 26px;
             padding-bottom: 13px;
             padding-left: 26px;
+            border: 2px solid $color_primary;
+            border-radius: 24px;
             font-size: 1.6em;
             font-weight: 700;
-            border: 2px solid #195cb8;
-            border-radius: 24px;
-            background: #195cb8;
+            background: $color_primary;
             color: $color_white;
             transition: 0.5s;
 
             &:hover {
-                border-color: #195cb8;
-                background-color: #fff;
-                color: #195cb8;
+                border-color: $color_primary;
+                background-color: $color_white;
+                color: $color_primary;
                 opacity: 1;
             }
         }
@@ -122,12 +124,14 @@
         width: 100%;
         opacity: 0;
         visibility: hidden;
-        transition: all 0.7s cubic-bezier(0.33, 1, 0.68, 1);
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
         z-index: 100;
 
         &.is-active {
-            visibility: inherit;
             opacity: 1;
+            visibility: inherit;
         }
 
         &Logo {
@@ -171,7 +175,7 @@
             & a {
                 font-size: 1.8rem;
                 font-weight: 700;
-                color: #fff;
+                color: $color_white;
 
                 &:hover {
                     opacity: 0.7;
@@ -188,7 +192,7 @@
                     padding-right: 79px;
                     padding-bottom: 13px;
                     padding-left: 80px;
-                    border: 2px solid #fff;
+                    border: 2px solid $color_white;
                     border-radius: 24px;
 
                     @include sp {
@@ -198,8 +202,8 @@
                     }
 
                     &:hover {
-                        background-color: #fff;
-                        color: #195cb8;
+                        background-color: $color_white;
+                        color: $color_primary;
                         box-sizing: border-box;
                         opacity: 1;
                     }
@@ -217,6 +221,11 @@
         visibility: hidden;
         opacity: 0;
 
+        @include pc-tab {
+            visibility: inherit;
+            opacity: 1;
+        }
+
         @include sp {
             visibility: inherit;
             opacity: 1;
@@ -228,15 +237,8 @@
         }
 
         &Btn {
-            transition: all 0.4s ease-in-out;
-            line-height: 1.5;
-            position: relative;
             display: table-cell;
-            vertical-align: middle;
-            background-color: #004bb1;
-            text-align: center;
-            font-weight: bold;
-            font-size: 0.9375rem;
+            position: relative;
             width: 80px;
             height: 80px;
             margin-right: 20px;
@@ -248,7 +250,13 @@
             padding-left: 25px;
             border-color: transparent;
             border-radius: 40px;
-            cursor: pointer;
+            font-size: 1.6rem;
+            font-weight: 700;
+            background-color: #004bb1;
+            text-align: center;
+            vertical-align: middle;
+            // transition: all 0.4s ease-in-out;
+            line-height: 1.5;
 
             @include sp {
                 width: 60px;
@@ -269,13 +277,13 @@
             left: 50%;
             transform: translateX(-50%);
             width: 30px;
-            background-color: #fff;
+            background-color: $color_white;
             transition: 0.4s;
 
             @include sp {
                 top: 25px;
                 width: 20px;
-                background-color: #195cb8;
+                background-color: $color_primary;
             }
 
             &.is-active {
@@ -289,11 +297,11 @@
                 top: -6px;
                 width: 100%;
                 height: 100%;
-                background-color: #fff;
+                background-color: $color_white;
                 transition: inherit;
 
                 @include sp {
-                    background-color: #195cb8;
+                    background-color: $color_primary;
                 }
             }
 
@@ -302,7 +310,7 @@
                 transform: rotate(45deg);
 
                 @include sp {
-                    background-color: #fff;
+                    background-color: $color_white;
                 }
             }
 
@@ -313,11 +321,11 @@
                 top: 6px;
                 width: 100%;
                 height: 100%;
-                background-color: #fff;
+                background-color: $color_white;
                 transition: inherit;
 
                 @include sp {
-                    background-color: #195cb8;
+                    background-color: $color_primary;
                 }
             }
 
@@ -326,7 +334,7 @@
                 transform: rotate(-45deg);
 
                 @include sp {
-                    background-color: #fff;
+                    background-color: $color_white;
                 }
             }
         }
@@ -344,17 +352,15 @@
 
             &::before {
                 content: "MENU";
-                font-family: "Yu Gothic Medium", "游ゴシック", "Yu Gothic",
-                    "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3",
-                    "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
-                font-size: 10px;
+                font-family: $font-family-txt;
+                font-size: 1rem;
                 font-weight: 700;
-                color: #fff;
+                color: $color_white;
                 letter-spacing: 0.02em;
                 text-align: center;
 
                 @include sp {
-                    color: #195cb8;
+                    color: $color_primary;
                 }
             }
 
@@ -362,30 +368,9 @@
                 content: "CLOSE";
 
                 @include sp {
-                    color: #fff;
+                    color: $color_white;
                 }
             }
         }
-    }
-}
-
-// ここからSassに組み込み
-@media (min-width: 1025px) {
-    body.is-fixed {
-        overflow-y: hidden;
-    }
-}
-
-@media (max-width: 1024px) {
-    body.is-fixed {
-        overflow-y: hidden;
-    }
-}
-
-@media (max-width: 767px) {
-    .l-header__logo .sp {
-        display: block;
-        max-width: 190px;
-        max-height: 33px;
     }
 }
