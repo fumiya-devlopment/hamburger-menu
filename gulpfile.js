@@ -115,7 +115,7 @@ gulp.task('webpack', () => {
 
 gulp.task('js', gulp.parallel('webpack'));
 
-// jsdoc
+jsdoc
 gulp.task('doc', (cb) => {
     gulp.src(['README.md', `${SRC}/assets/js/**/*.js`], {
         read: false

@@ -1,4 +1,4 @@
-// スクロール時、グローバルメニューに対してクラス名を付与
+// スクロール時、グローバルメニューに対してクラスを付与
 window.addEventListener('scroll', function () {
     if (window.scrollY > 200) {
         document.querySelector('.l-header__menu').classList.add('is-active');
@@ -7,7 +7,7 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// スクロール時、ハンバーガーメニューのボタンに対してクラス名を付与
+// スクロール時、ハンバーガーメニューのボタンに対してクラスを付与
 window.addEventListener('scroll', function () {
     if (window.scrollY > 200) {
         document.querySelector('.l-header__trigger').classList.add('is-active');
