@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="303.84" height="46" viewBox="0 0 303.84 46">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="72" height="40" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="logo-white" transform="translate(-29.16 -15)">
+    <text id="渋谷のコーディング専門プロダクション" transform="translate(117 58)" fill="#fff" font-size="12" font-family="SourceHanSansJP-Normal, Source Han Sans JP"><tspan x="0" y="0">渋谷のコーディング専門プロダクション</tspan></text>
+    <text id="株式会社FLAT" transform="translate(117 38)" fill="#fff" font-size="20" font-family="SourceHanSansJP-Bold, Source Han Sans JP" font-weight="700"><tspan x="0" y="0">株式会社FLAT</tspan></text>
+    <g id="logo" transform="translate(29.16 18)" clip-path="url(#clip-path)">
+      <path id="パス_754" data-name="パス 754" d="M477.108,352.572a19.952,19.952,0,0,0-4.135-7.221,15.648,15.648,0,0,0-7.247-4.536,33.544,33.544,0,0,0-10.054-1.405H434.018L424.4,353.352l-9.351-13.941h-8.811l13.784,20.049L406.234,379.41h8.811l9.351-13.838,9.622,13.838h8.541L428.721,359.46l9.063-13.135h17.887q7.845,0,11.622,4.108a13.265,13.265,0,0,1,2.626,4.243,13.655,13.655,0,0,1,.892,4.842,14.815,14.815,0,0,1-.811,4.7,11.544,11.544,0,0,1-2.6,4.324q-3.675,3.946-11.509,3.946h-2.383v-17.2H446.1V379.41h9.626a30.512,30.512,0,0,0,10.324-1.464,17.654,17.654,0,0,0,6.969-4.644,19.36,19.36,0,0,0,3.815-6.248,22.24,22.24,0,0,0,1.374-8.023A23.074,23.074,0,0,0,477.108,352.572Z" transform="translate(-406.235 -339.41)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
