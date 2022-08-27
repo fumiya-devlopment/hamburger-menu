@@ -4,7 +4,7 @@
 //  * 値を返す
 //  */
 @function retina($size) {
-  @return $size * $retinaRatio;
+    @return $size * $retinaRatio;
 }
 
 // /**
@@ -18,15 +18,15 @@
 // $sp: "only screen and (max-width:" + $breakPoint + ")"; // @media #{$sp} {}
 
 @mixin pc-tab {
-  @media screen and (min-width: 768px) {
-    @content;
-  }
+    @media not all and (min-width: 1060px) {
+        @content;
+    }
 }
 
 @mixin sp {
-  @media screen and (max-width: 767px) {
-    @content;
-  }
+    @media screen and (max-width: 767px) {
+        @content;
+    }
 }
 
 // @mixin tab {
@@ -39,13 +39,13 @@
 // font-sizeにvwを設定
 //  */
 @mixin vw($size) {
-  font-size: ($size / 2) * 1px;
-  font-size: ($size / $breakPoint * 100) * 1vw;
+    font-size: ($size / 2) * 1px;
+    font-size: ($size / $breakPoint * 100) * 1vw;
 }
 
 @mixin fs($size) {
-  font-size: $size + px;
-  font-size: ($size / $base_fs) * 1rem;
+    font-size: $size + px;
+    font-size: ($size / $base_fs) * 1rem;
 }
 
 // /* vw
@@ -54,63 +54,63 @@
 //  */
 
 @function gap($size, $bp: $breakPoint) {
-  @return ($size / $bp * 100) * 1vw;
+    @return ($size / $bp * 100) * 1vw;
 }
 
 @function gap_px($size) {
-  @return ($size / 2) * 1px;
+    @return ($size / 2) * 1px;
 }
 
 // /*
 // clearfix
 //  */
 @mixin cf {
-  zoom: 1;
-  &:before,
-  &:after {
-    display: block;
-    height: 0;
-    visibility: hidden;
-    content: "\0020";
-  }
-  &:after {
-    clear: both;
-  }
+    zoom: 1;
+    &:before,
+    &:after {
+        display: block;
+        height: 0;
+        visibility: hidden;
+        content: "\0020";
+    }
+    &:after {
+        clear: both;
+    }
 }
 
 // /*
 // iOS smooth scroll
 //  */
 @mixin smoothScroll {
-  -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
 }
 
 // /*
 // opacity
 //  */
 @mixin opacity($opacity) {
-  opacity: $opacity;
-  $opacityIE: $opacity * 100;
-  filter: alpha(opacity=$opacityIE);
+    opacity: $opacity;
+    $opacityIE: $opacity * 100;
+    filter: alpha(opacity=$opacityIE);
 }
 
 // /*
 // fade
 //  */
 @mixin fade {
-  transition: opacity 0.1s ease-in-out 0s;
-  &:hover {
-    opacity: 0.7;
-  }
+    transition: opacity 0.1s ease-in-out 0s;
+    &:hover {
+        opacity: 0.7;
+    }
 }
 @mixin noFade {
-  &:hover {
-    opacity: 1;
-  }
+    &:hover {
+        opacity: 1;
+    }
 }
 
 //インデント
 @mixin indent {
-  text-indent: -1em;
-  padding-left: 1em;
+    text-indent: -1em;
+    padding-left: 1em;
 }
